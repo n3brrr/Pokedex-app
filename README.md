@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡ PokéDex Portfolio
+# ⚡ PokéDex app
 
 **Explorador moderno de Pokémon con Next.js 15 y PokéAPI**
 
@@ -10,7 +10,7 @@
 ![PokéAPI](https://img.shields.io/badge/API-PokéAPI-EF5350?style=flat)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat)
 
-[🚀 Demo en Vivo](#) • [🐛 Reportar Bug](https://github.com/TU_USUARIO/pokedex-portfolio/issues) • [📖 Docs](https://pokeapi.co/docs/v2)
+[🚀 Demo en Vivo](#) • [🐛 Reportar Bug](https://github.com/TU_USUARIO/pokedex-app/issues) • [📖 Docs](https://pokeapi.co/docs/v2)
 
 </div>
 
@@ -18,7 +18,7 @@
 
 ## ⚡ Resumen
 
-Aplicación web moderna que consume la PokéAPI para mostrar información detallada de los 1025 Pokémon existentes. Incluye sistema de búsqueda, filtros por tipo, rutas dinámicas y diseño responsive optimizado para portfolio profesional[web:104][web:111].
+Aplicación web moderna que consume la PokéAPI para mostrar información detallada de los 1025 Pokémon existentes. Incluye sistema de búsqueda, filtros por tipo, rutas dinámicas y diseño responsive optimizado para app profesional[web:104][web:111].
 
 ### ✨ Características
 
@@ -49,10 +49,10 @@ Aplicación web moderna que consume la PokéAPI para mostrar información detall
 ### Setup Rápido
 
 Clonar repositorio
-git clone https://github.com/TU_USUARIO/pokedex-portfolio.git
+git clone https://github.com/TU_USUARIO/pokedex-app.git
 
 Navegar al directorio
-cd pokedex-portfolio
+cd pokedex-app
 
 Instalar dependencias
 npm install
@@ -89,7 +89,7 @@ La aplicación se navega de forma intuitiva:
 
 ## 📁 Estructura del Proyecto
 ```
-pokedex-portfolio/
+pokedex-app/
 ├── app/ # App Router de Next.js
 │ ├── page.tsx # Página principal (lista)
 │ ├── layout.tsx # Layout global
@@ -170,7 +170,7 @@ MIT License - ver [LICENSE](./LICENSE)
 
 ⭐ **Si este proyecto te fue útil, considera dejar una estrella**
 
-![GitHub Stars](https://img.shields.io/github/stars/TU_USUARIO/pokedex-portfolio?style=social)
-![GitHub Forks](https://img.shields.io/github/forks/TU_USUARIO/pokedex-portfolio?style=social)
+![GitHub Stars](https://img.shields.io/github/stars/TU_USUARIO/pokedex-app?style=social)
+![GitHub Forks](https://img.shields.io/github/forks/TU_USUARIO/pokedex-app?style=social)
 
 </div>
