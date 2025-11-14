@@ -60,7 +60,7 @@ npm install
 Ejecutar en desarrollo
 npm run dev
 
-text
+```
 
 Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
@@ -72,7 +72,7 @@ npm run build
 Ejecutar build
 npm start
 
-text
+```
 
 ---
 
@@ -88,7 +88,7 @@ La aplicación se navega de forma intuitiva:
 ---
 
 ## 📁 Estructura del Proyecto
-
+```
 pokedex-portfolio/
 ├── app/ # App Router de Next.js
 │ ├── page.tsx # Página principal (lista)
@@ -109,7 +109,7 @@ pokedex-portfolio/
 ├── public/ # Assets estáticos
 └── README.md
 
-text
+```
 
 ---
 
@@ -160,10 +160,9 @@ MIT License - ver [LICENSE](./LICENSE)
 
 ## 👤 Autor
 
-**TU_NOMBRE** - [@TU_GITHUB](https://github.com/TU_USUARIO)
+**TU_NOMBRE** - [@n3brrr](https://github.com/n3brrr)
 
-🌐 Portfolio: [tu-portfolio.com](#)  
-💼 LinkedIn: [tu-perfil](#)
+💼 LinkedIn: [Ruben Torres](https://www.linkedin.com/in/rubentorresdev/)
 
 ---
 
