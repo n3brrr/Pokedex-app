@@ -18,7 +18,7 @@
 
 ## ⚡ Resumen
 
-Aplicación web moderna que consume la PokéAPI para mostrar información detallada de los 1025 Pokémon existentes. Incluye sistema de búsqueda, filtros por tipo, rutas dinámicas y diseño responsive optimizado para app profesional[web:104][web:111].
+Aplicación web moderna que consume la PokéAPI para mostrar información detallada de los 1025 Pokémon existentes. Incluye sistema de búsqueda, filtros por tipo, rutas dinámicas y diseño responsive optimizado para app profesional.
 
 ### ✨ Características
 
