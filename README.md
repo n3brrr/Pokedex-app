@@ -35,6 +35,7 @@ Aplicación web moderna que consume la PokéAPI para mostrar información detall
 
 ![Next.js](https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-19.0-blue?style=for-the-badge&logo=react&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![PokéAPI](https://img.shields.io/badge/PokéAPI-v2-EF5350?style=for-the-badge)
 
