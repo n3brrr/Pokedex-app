@@ -7,6 +7,7 @@
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38bdf8?style=flat&logo=tailwindcss)
+![React](https://img.shields.io/badge/React-19.1-blue?style=flat&logo=react)
 ![PokéAPI](https://img.shields.io/badge/API-PokéAPI-EF5350?style=flat)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat)
 
