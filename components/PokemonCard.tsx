@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 interface Props {
   name: string;
   url: string;
@@ -16,11 +16,13 @@ export default function PokemonCard({ name, url }: Props) {
 
   return (
     <div className="border rounded-lg p-4 shadow-md hover:shadow-xl transition-shadow bg-white">
-      <img src={imageUrl} alt={name} className="w-full h-48 object-contain" />
-      <div className="text-center mt-2">
-        <p className="text-gray-500 text-sm">#{id.padStart(3, "0")}</p>
-        <p className="text-gray-500 text-sm">{capitalizedName}</p>
-      </div>
+      <Link href={`/pokemon/${id}`}>
+        <img src={imageUrl} alt={name} className="w-full h-48 object-contain" />
+        <div className="text-center mt-2">
+          <p className="text-gray-500 text-sm">#{id.padStart(3, "0")}</p>
+          <p className="text-gray-500 text-sm">{capitalizedName}</p>
+        </div>
+      </Link>
     </div>
   );
 }
