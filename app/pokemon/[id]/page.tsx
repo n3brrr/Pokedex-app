@@ -1,4 +1,5 @@
 import { getPokemonById } from "@/services/pokemon";
+import { stat } from "fs";
 import { type } from "os";
 
 //Define interface for the params
@@ -31,9 +32,9 @@ export default async function PokemonPage({ params }: Props) {
   const imageHD = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`;
 
   return (
-    <div className="max-w-sm mx-auto p-2 border-yellow-300 border-6 rounded-lg shadow-lg">
-      {/*Header and HP*/}
-      <div className="flex justify-between">
+    <div className="max-w-sm mx-auto p-2 border-yellow-300 border-10 rounded-lg shadow-lg">
+      {/*Name and HP*/}
+      <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold text-left capitalize">
           {pokemon.name}
         </h1>
@@ -46,31 +47,31 @@ export default async function PokemonPage({ params }: Props) {
           className="w-6 h-6"
         />
       </div>
-
-      {/*Image*/}
-      <div className="flex flex-col items-center">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={pokemon.sprites.front_default}
-          alt={pokemon.name}
-          className="w-48 h-48 object-contain"
-        />
-        <p className="text-gray-500">#{pokemon.id}</p>
-        <p className="text-gray-500">{pokemon.types[0].type.name}</p>
-        <p className="text-gray-500">{pokemon.types[1].type.name}</p>
+      {/*Central Image*/}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={imageHD}
+        alt={pokemon.name}
+        className="w-48 h-48 object-contain"
+      />
+      {/*Attacks*/}
+      <div className="">
+        <h2 className="text-2xl font-bold text-left capitalize">Ataques</h2>
+        <div className="flex flex-col gap-2">
+          {pokemon.moves.slice(0, 2).map((move) => (
+            <div key={move.move.name} className="flex items-center gap-2">
+              <p className="text-left capitalize">{move.move.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
+      <div></div>
     </div>
   );
 }
 
 // lo que tiene que incluir en el pokemon Imagen Grande: La estrella del show.
-
-// Nombre y Número: Claros y grandes.
-
-// Tipos: Etiquetas de colores (Fuego, Agua, etc.).
-
-// Estadísticas (Stats): Barras de progreso para HP, Ataque, Defensa...
-
-// Información Física: Peso y Altura.
-
+// Daño del ataque y tipo del ataque.
+//Barra en el fondo separado al bottom que ponga el numero de la serie tipo 25/96 y el simbolo de rare , normal, etc...
+//Creado por Ruben
 // Botón Volver: Para regresar a la lista.

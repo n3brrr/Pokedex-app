@@ -26,9 +26,15 @@ export interface Pokemon {
       url: string;
     };
   }>;
+  moves: Array<{
+    move: {
+      name: string;
+      url: string;
+    };
+  }>;
   stats: Array<{
     base_stat: number;
-    star: {
+    stat: {
       name: string;
     };
   }>;
