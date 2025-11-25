@@ -2,7 +2,7 @@ import { getPokemonList } from "@/services/pokemon";
 import PokemonCard from "@/components/PokemonCard";
 
 export default async function Home() {
-  const lista = await getPokemonList(1000);
+  const lista = await getPokemonList(699);
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 m-5">
