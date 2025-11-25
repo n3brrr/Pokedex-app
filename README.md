@@ -128,13 +128,13 @@ pokedex-app/
 
 ```
 
-@@ -124,7 +125,7 @@ pokedex-app/ 3. **Componentes de presentación** reciben datos tipados vía props 4. **Rutas dinámicas** generan páginas estáticas en build time (SSG)
+3. **Componentes de presentación** reciben datos tipados vía props 4. **Rutas dinámicas** generan páginas estáticas en build time (SSG)
 
 **Patrón Container/Presentational aplicado para separación de responsabilidades**.
 
 ---
 
-@@ -150,7 +151,7 @@ Este proyecto consume **PokéAPI v2**:
+Este proyecto consume **PokéAPI v2**:
 
 - `/pokemon/{id}` - Detalle individual
 - `/type/{id}` - Pokémon por tipo
@@ -143,15 +143,13 @@ pokedex-app/
 
 ---
 
-@@ -162,7 +163,7 @@ MIT License - ver [LICENSE](./LICENSE)
+MIT License - ver [LICENSE](./LICENSE)
 
 ## 👤 Autor
 
 **Ruben Torres** - [@n3brrr](https://github.com/n3brrr)
 
 💼 LinkedIn: [Ruben Torres](https://www.linkedin.com/in/rubentorresdev/)
-
-@@ -172,7 +173,7 @@ MIT License - ver [LICENSE](./LICENSE)
 
 ⭐ **Si este proyecto te fue útil, considera dejar una estrella**
 
