@@ -1,13 +1,11 @@
-import { getPokemonById } from "@/services/pokemon";
-import { stat } from "fs";
-import { type } from "os";
-
+import { getPokemonById, getMovesDetails } from "@/services/pokemon";
+import Link from "next/link";
 //Define interface for the params
 interface Props {
   params: Promise<{ id: string }>;
 }
 
-const typeColors = {
+const typeColors: Record<string, string> = {
   fire: "bg-red-500 shadow-red-500/50",
   water: "bg-blue-500 shadow-blue-500/50",
   grass: "bg-green-500 shadow-green-500/50",
@@ -31,41 +29,69 @@ export default async function PokemonPage({ params }: Props) {
   const pokemon = await getPokemonById(id);
   const imageHD = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`;
 
+  const attack1 = await getMovesDetails(pokemon.moves[0].move.url);
+  const attack2 = await getMovesDetails(pokemon.moves[1].move.url);
+
   return (
-    <div className="max-w-sm mx-auto p-2 border-yellow-300 border-10 rounded-lg shadow-lg">
-      {/*Name and HP*/}
-      <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-left capitalize">
-          {pokemon.name}
-        </h1>
-        <h2 className="text-right font-bold">{pokemon.stats[0].base_stat}</h2>
-        {/*Type Icon*/}
+    <div>
+      <div className="max-w-sm mx-auto p-2 border-yellow-300 border-10 rounded-lg shadow-lg">
+        {/*Name and HP*/}
+        <div className="flex justify-between items-center">
+          <h1 className="text-2xl font-bold text-left capitalize">
+            {pokemon.name}
+          </h1>
+          <h2 className="text-right font-bold">{pokemon.stats[0].base_stat}</h2>
+          {/*Type Icon*/}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`icons/${pokemon.types[0].type.name}.svg`}
+            alt={pokemon.types[0].type.name}
+            className="w-6 h-6"
+          />
+        </div>
+        {/*Central Image*/}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={`icons/${pokemon.types[0].type.name}.svg`}
-          alt={pokemon.types[0].type.name}
-          className="w-6 h-6"
+          src={imageHD}
+          alt={pokemon.name}
+          className="w-48 h-48 object-contain"
         />
-      </div>
-      {/*Central Image*/}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={imageHD}
-        alt={pokemon.name}
-        className="w-48 h-48 object-contain"
-      />
-      {/*Attacks*/}
-      <div className="">
-        <h2 className="text-2xl font-bold text-left capitalize">Ataques</h2>
-        <div className="flex flex-col gap-2">
-          {pokemon.moves.slice(0, 2).map((move) => (
-            <div key={move.move.name} className="flex items-center gap-2">
-              <p className="text-left capitalize">{move.move.name}</p>
-            </div>
-          ))}
+        {/*Attacks*/}
+        <div className="">
+          <h2 className="text-2xl font-bold text-center capitalize">Ataques</h2>
+          <div className="flex flex-col gap-2">
+            {pokemon.moves.slice(0, 1).map((move) => (
+              <div key={attack1.name} className="flex justify-between gap-2">
+                <p className="text-right capitalize">{attack1.name}</p>
+                <p className="text-left font-bold">{attack1.power || 0}</p>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-col gap-2">
+            {pokemon.moves.slice(1, 2).map((move) => (
+              <div key={attack2.name} className="flex justify-between gap-2">
+                <p className="text-right capitalize">{attack2.name}</p>
+                <p className="text-left font-bold">{attack2.power || 0}</p>
+              </div>
+            ))}
+          </div>
         </div>
+        {/*Footer*/}
+        <div className="fmt-4 border-t-2 border-gray-300 pt-2 flex justify-between text-xs text-gray-500 font-bold">
+          <p>25/151 ★</p>
+          <p>{pokemon.moves[0].move.cost} retreat cost</p>
+        </div>
+        <p className="text-xs text-gray-500 font-bold text-center">
+          ®2025 Rubén Torres
+        </p>
       </div>
-      <div></div>
+      <Link
+        href="/"
+        className="mt-5 inline-block bg-blue-500 text-white px-4 py-2 rounded
+                   hover:bg-blue-600 transition duration-300 align-center"
+      >
+        Volver
+      </Link>
     </div>
   );
 }

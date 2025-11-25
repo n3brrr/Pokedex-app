@@ -1,18 +1,18 @@
-//Importamos los datos de la API
+//Import API data
 
-//La lista con los Pokemons
+//The list with the Pokemons
 export interface PokemonListItem {
   name: string;
   url: string;
 }
 
-//Cuantos pokemons queremos importar
+//How many pokemons we want to import
 export interface PokemonListResponse {
   count: number;
   results: PokemonListItem[];
 }
 
-//Los atributos de los pokemons
+//The attributes of the pokemons
 export interface Pokemon {
   id: number;
   name: string;
@@ -30,6 +30,8 @@ export interface Pokemon {
     move: {
       name: string;
       url: string;
+      power: number;
+      id: number;
     };
   }>;
   stats: Array<{
