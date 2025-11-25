@@ -11,7 +11,7 @@
 ![PokéAPI](https://img.shields.io/badge/API-PokéAPI-EF5350?style=flat)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat)
 
-[🚀 Live Demo](#) • [🐛 Report Bug](https://github.com/n3brrr/pokedex-app/issues) • [📖 Docs](https://pokeapi.co/docs/v2)
+[🚀 Live Demo](https://pokedex-app-nine-inky.vercel.app/) • [🐛 Report Bug](https://github.com/n3brrr/pokedex-app/issues) • [📖 Docs](https://pokeapi.co/docs/v2)
 
 </div>
 
