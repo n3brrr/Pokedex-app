@@ -90,25 +90,26 @@ La aplicación se navega de forma intuitiva:
 ---
 
 ## 📁 Estructura del Proyecto
+
 ```
 pokedex-app/
-├── app/ # App Router de Next.js
-│ ├── page.tsx # Página principal (lista)
-│ ├── layout.tsx # Layout global
-│ └── pokemon/
-│ └── [id]/
-│ └── page.tsx # Página de detalle dinámico
-├── components/ # Componentes reutilizables
-│ ├── PokemonCard.tsx
-│ ├── SearchBar.tsx
-│ └── TypeFilter.tsx
-├── services/ # Lógica de API
-│ └── pokemon.ts # Funciones para PokéAPI
-├── types/ # Tipos TypeScript
-│ └── pokemon.ts
-├── hooks/ # Custom hooks
-│ └── usePokemon.ts
-├── public/ # Assets estáticos
+├── app/                    # App Router de Next.js
+│   ├── page.tsx            # Página principal (lista)
+│   ├── layout.tsx          # Layout global
+│   └── pokemon/
+│       └── [id]/
+│           └── page.tsx    # Página de detalle dinámico
+├── components/             # Componentes reutilizables
+│   ├── PokemonCard.tsx
+│   ├── SearchBar.tsx
+│   └── TypeFilter.tsx
+├── services/               # Lógica de API
+│   └── pokemon.ts          # Funciones para PokéAPI
+├── types/                  # Tipos TypeScript
+│   └── pokemon.ts
+├── hooks/                  # Custom hooks
+│   └── usePokemon.ts
+├── public/                 # Assets estáticos
 └── README.md
 
 ```
@@ -124,7 +125,7 @@ pokedex-app/
 3. **Componentes de presentación** reciben datos tipados vía props
 4. **Rutas dinámicas** generan páginas estáticas en build time (SSG)
 
-**Patrón Container/Presentational aplicado para separación de responsabilidades**[web:63][web:104].
+**Patrón Container/Presentational aplicado para separación de responsabilidades**.
 
 ---
 
@@ -150,7 +151,7 @@ Este proyecto consume **PokéAPI v2**:
   - `/pokemon/{id}` - Detalle individual
   - `/type/{id}` - Pokémon por tipo
 
-**Sin autenticación requerida** - 100% gratuita[web:83].
+**Sin autenticación requerida** - 100% gratuita.
 
 ---
 
@@ -162,7 +163,7 @@ MIT License - ver [LICENSE](./LICENSE)
 
 ## 👤 Autor
 
-**TU_NOMBRE** - [@n3brrr](https://github.com/n3brrr)
+**Ruben Torres** - [@n3brrr](https://github.com/n3brrr)
 
 💼 LinkedIn: [Ruben Torres](https://www.linkedin.com/in/rubentorresdev/)
 
@@ -172,7 +173,7 @@ MIT License - ver [LICENSE](./LICENSE)
 
 ⭐ **Si este proyecto te fue útil, considera dejar una estrella**
 
-![GitHub Stars](https://img.shields.io/github/stars/TU_USUARIO/pokedex-app?style=social)
-![GitHub Forks](https://img.shields.io/github/forks/TU_USUARIO/pokedex-app?style=social)
+![GitHub Stars](https://img.shields.io/github/stars/n3brrr/pokedex-app?style=social)
+![GitHub Forks](https://img.shields.io/github/forks/n3brrr/pokedex-app?style=social)
 
 </div>
