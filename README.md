@@ -2,7 +2,7 @@
 
 # ⚡ PokéDex app
 
-**Explorador moderno de Pokémon con Next.js 15 y PokéAPI**
+**Modern Pokémon explorer with Next.js 15 and PokéAPI**
 
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat&logo=typescript)
@@ -11,27 +11,27 @@
 ![PokéAPI](https://img.shields.io/badge/API-PokéAPI-EF5350?style=flat)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat)
 
-[🚀 Demo en Vivo](#) • [🐛 Reportar Bug](https://github.com/TU_USUARIO/pokedex-app/issues) • [📖 Docs](https://pokeapi.co/docs/v2)
+[🚀 Live Demo](#) • [🐛 Report Bug](https://github.com/n3brrr/pokedex-app/issues) • [📖 Docs](https://pokeapi.co/docs/v2)
 
 </div>
 
 ---
 
-## ⚡ Resumen
+## ⚡ Summary
 
-Aplicación web moderna que consume la PokéAPI para mostrar información detallada de los 1025 Pokémon existentes. Incluye sistema de búsqueda, filtros por tipo, rutas dinámicas y diseño responsive optimizado para app profesional.
+Modern web application that consumes the PokéAPI to display detailed information about the 1025 existing Pokémon. Includes search system, type filters, dynamic routes, and responsive design optimized for a professional app.
 
-### ✨ Características
+### ✨ Features
 
-- 🎯 **Datos en tiempo real** - Integración completa con PokéAPI v2
-- 🔍 **Búsqueda inteligente** - Encuentra Pokémon por nombre o ID
-- 🏷️ **Filtros por tipo** - Filtra por los 18 tipos elementales
-- 📱 **Diseño responsive** - Mobile-first con Tailwind CSS
-- ⚡ **Server Components** - Renderizado optimizado con Next.js 15
-- 🎨 **UI moderna** - Interfaz limpia y profesional
-- 🔗 **Rutas dinámicas** - Vista detallada para cada Pokémon
+- 🎯 **Real-time data** - Full integration with PokéAPI v2
+- 🔍 **Smart search** - Find Pokémon by name or ID
+- 🏷️ **Type filters** - Filter by the 18 elemental types
+- 📱 **Responsive design** - Mobile-first with Tailwind CSS
+- ⚡ **Server Components** - Optimized rendering with Next.js 15
+- 🎨 **Modern UI** - Clean and professional interface
+- 🔗 **Dynamic routes** - Detailed view for each Pokémon
 
-### 🛠️ Stack Tecnológico
+### 🛠️ Tech Stack
 
 ![Next.js](https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
@@ -41,139 +41,66 @@ Aplicación web moderna que consume la PokéAPI para mostrar información detall
 
 ---
 
-## 🚀 Instalación
+## 🚀 Installation
 
-### Prerequisitos
+### Prerequisites
 
-- Node.js 18.17 o superior
-- npm, pnpm o yarn
+- Node.js 18.17 or higher
+- npm, pnpm or yarn
 
-### Setup Rápido
+### Quick Setup
 
-Clonar repositorio
-git clone https://github.com/TU_USUARIO/pokedex-app.git
+Clone repository
 
-Navegar al directorio
+```bash
+git clone https://github.com/YOUR_USER/pokedex-app.git
+```
+
+Navigate to directory
+
+```bash
 cd pokedex-app
+```
 
-Instalar dependencias
+Install dependencies
+
+```bash
 npm install
+```
 
-Ejecutar en desarrollo
+Run in development
+
+```bash
 npm run dev
-
 ```
 
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Build para Producción
+### Production Build
 
-Crear build optimizado
+Create optimized build
+
+```bash
 npm run build
+```
 
-Ejecutar build
+Run build
+
+```bash
 npm start
-
 ```
 
 ---
 
-## 💻 Uso
+## 💻 Usage
 
-La aplicación se navega de forma intuitiva:
+The application is navigated intuitively:
 
-- **Página principal**: Lista de Pokémon con scroll infinito
-- **Búsqueda**: Escribe nombre o número en la barra superior
-- **Filtros**: Selecciona tipos desde el menú lateral
-- **Detalle**: Haz clic en cualquier Pokémon para ver stats completas
-
----
-
-## 📁 Estructura del Proyecto
-
-```
-pokedex-app/
-├── app/                    # App Router de Next.js
-│   ├── page.tsx            # Página principal (lista)
-│   ├── layout.tsx          # Layout global
-│   └── pokemon/
-│       └── [id]/
-│           └── page.tsx    # Página de detalle dinámico
-├── components/             # Componentes reutilizables
-│   ├── PokemonCard.tsx
-│   ├── SearchBar.tsx
-│   └── TypeFilter.tsx
-├── services/               # Lógica de API
-│   └── pokemon.ts          # Funciones para PokéAPI
-├── types/                  # Tipos TypeScript
-│   └── pokemon.ts
-├── hooks/                  # Custom hooks
-│   └── usePokemon.ts
-├── public/                 # Assets estáticos
-└── README.md
-
-```
+- **Home page**: List of Pokémon with infinite scroll
+- **Search**: Type name or number in the top bar
+- **Filters**: Select types from the side menu
+- **Detail**: Click on any Pokémon to see full stats
 
 ---
 
-## 🔄 Arquitectura
-
-**Flujo de datos:**
-
-1. **Server Component** (app/page.tsx) hace fetch inicial a PokéAPI
-2. **Service Layer** (services/pokemon.ts) gestiona todas las peticiones HTTP
-3. **Componentes de presentación** reciben datos tipados vía props
-4. **Rutas dinámicas** generan páginas estáticas en build time (SSG)
-
-**Patrón Container/Presentational aplicado para separación de responsabilidades**.
-
----
-
-## 🎨 Características Técnicas Destacadas
-
-- ✅ TypeScript estricto para type safety
-- ✅ Server Components por defecto (mejor performance)
-- ✅ Generación estática de rutas con `generateStaticParams`
-- ✅ CSS utility-first con Tailwind CSS
-- ✅ Componentes modulares y reutilizables
-- ✅ Import alias `@/*` para imports limpios
-- ✅ ESLint configurado para código consistente
-
----
-
-## 🌐 API Reference
-
-Este proyecto consume **PokéAPI v2**:
-
-- **Base URL**: `https://pokeapi.co/api/v2`
-- **Endpoints principales**:
-  - `/pokemon` - Lista de Pokémon
-  - `/pokemon/{id}` - Detalle individual
-  - `/type/{id}` - Pokémon por tipo
-
-**Sin autenticación requerida** - 100% gratuita.
-
----
-
-## 📄 Licencia
-
-MIT License - ver [LICENSE](./LICENSE)
-
----
-
-## 👤 Autor
-
-**Ruben Torres** - [@n3brrr](https://github.com/n3brrr)
-
-💼 LinkedIn: [Ruben Torres](https://www.linkedin.com/in/rubentorresdev/)
-
----
-
-<div align="center">
-
-⭐ **Si este proyecto te fue útil, considera dejar una estrella**
-
-![GitHub Stars](https://img.shields.io/github/stars/n3brrr/pokedex-app?style=social)
-![GitHub Forks](https://img.shields.io/github/forks/n3brrr/pokedex-app?style=social)
-
-</div>
+## 📁 Project Structure

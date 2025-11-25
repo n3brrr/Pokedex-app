@@ -8,15 +8,15 @@ import { Pokemon, PokemonListResponse } from "@/types/pokemon";
  */
 export async function getPokemonById(id: number | string): Promise<Pokemon> {
   try {
-    const respuesta = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-    if (!respuesta.ok) {
-      throw new Error(`Error HTTP: ${respuesta.status}`);
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+    if (!response.ok) {
+      throw new Error(`HTTP Error: ${response.status}`);
     }
-    const datos: Pokemon = await respuesta.json();
+    const data: Pokemon = await response.json();
 
-    return datos;
+    return data;
   } catch (error) {
-    console.error("No se ha podido encontrar los datos: ", error);
+    console.error("Could not find data: ", error);
     throw error;
   }
 }
@@ -36,33 +36,32 @@ export async function getPokemonList(
     );
 
     if (!res.ok) {
-      throw new Error(`Error HTTP: ${res.status}`);
+      throw new Error(`HTTP Error: ${res.status}`);
     }
-    const datos: PokemonListResponse = await res.json();
-    return datos;
+    const data: PokemonListResponse = await res.json();
+    return data;
   } catch (error) {
-    console.error("No se ha podido encontrar la lista: ", error);
+    console.error("Could not find the list: ", error);
     throw error;
   }
 }
 
 /**
  * Fetches detailed information for a specific Pokemon move by its name.
- * @param moveDamage - The damage of the move to retrieve.
+ * @param url - The URL of the move to retrieve.
  * @returns A Promise that resolves to the move data.
  * @throws Will throw an error if the fetch request fails.
  */
-export async function getMovesDetails(url : string) {
+export async function getMovesDetails(url: string) {
   try {
     const res = await fetch(url);
     if (!res.ok) {
-      throw new Error(`Error HTTP: ${res.status}`);
+      throw new Error(`HTTP Error: ${res.status}`);
     }
     const data = await res.json();
     return data;
   } catch (error) {
-    console.error("No se ha podido encontrar el daño del ataque : ", error);
+    console.error("Could not find move damage: ", error);
     throw error;
   }
-
 }
