@@ -11,7 +11,7 @@
 ![PokéAPI](https://img.shields.io/badge/API-PokéAPI-EF5350?style=flat)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat)
 
-[🚀 Live Demo](https://pokedex-app-nine-inky.vercel.app/) • [🐛 Report Bug](https://github.com/n3brrr/pokedex-app/issues) • [📖 Docs](https://pokeapi.co/docs/v2)
+[🚀 Live Demo](#) • [🐛 Report Bug](https://github.com/n3brrr/pokedex-app/issues) • [📖 Docs](https://pokeapi.co/docs/v2)
 
 </div>
 
@@ -104,3 +104,58 @@ The application is navigated intuitively:
 ---
 
 ## 📁 Project Structure
+
+```
+pokedex-app/
+├── app/                    # App Router de Next.js
+│   ├── page.tsx            # Página principal (lista)
+│   ├── layout.tsx          # Layout global
+│   └── pokemon/
+│       └── [id]/
+│           └── page.tsx    # Página de detalle dinámico
+├── components/             # Componentes reutilizables
+│   ├── PokemonCard.tsx
+│   ├── SearchBar.tsx
+│   └── TypeFilter.tsx
+├── services/               # Lógica de API
+│   └── pokemon.ts          # Funciones para PokéAPI
+├── types/                  # Tipos TypeScript
+│   └── pokemon.ts
+├── hooks/                  # Custom hooks
+│   └── usePokemon.ts
+├── public/                 # Assets estáticos
+└── README.md
+
+```
+
+@@ -124,7 +125,7 @@ pokedex-app/ 3. **Componentes de presentación** reciben datos tipados vía props 4. **Rutas dinámicas** generan páginas estáticas en build time (SSG)
+
+**Patrón Container/Presentational aplicado para separación de responsabilidades**.
+
+---
+
+@@ -150,7 +151,7 @@ Este proyecto consume **PokéAPI v2**:
+
+- `/pokemon/{id}` - Detalle individual
+- `/type/{id}` - Pokémon por tipo
+
+**Sin autenticación requerida** - 100% gratuita.
+
+---
+
+@@ -162,7 +163,7 @@ MIT License - ver [LICENSE](./LICENSE)
+
+## 👤 Autor
+
+**Ruben Torres** - [@n3brrr](https://github.com/n3brrr)
+
+💼 LinkedIn: [Ruben Torres](https://www.linkedin.com/in/rubentorresdev/)
+
+@@ -172,7 +173,7 @@ MIT License - ver [LICENSE](./LICENSE)
+
+⭐ **Si este proyecto te fue útil, considera dejar una estrella**
+
+![GitHub Stars](https://img.shields.io/github/stars/n3brrr/pokedex-app?style=social)
+![GitHub Forks](https://img.shields.io/github/forks/n3brrr/pokedex-app?style=social)
+
+</div>
